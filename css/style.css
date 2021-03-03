@@ -1,0 +1,363 @@
+:root {
+    --black: #222222;
+    --pink: #F1E4E6;
+    --dark-pink: #F16D7F;
+    --white: #FFFFFF;
+    --brown: #474040;
+    --gray: #9F9F9F;
+    --light-gray: #F8F8F8;
+    --gray-products-item-text: #5D5D5D;
+    --white-advantages: #FBFBFB;
+    --pink-button-border: #FF6A6A;
+    --pink-button: #F26376;
+}
+
+body {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;    
+}
+
+.header {
+    background-color: var(--black);
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}
+
+.header__wrapper {
+    display: flex;
+    justify-content: space-between;
+    min-height: 75px;
+    align-items: center;
+}
+
+.header__logo-link {
+    margin: 0 41px 0 0;
+}
+
+.header__controls_position {
+    position: relative;
+}
+
+.header__button {
+    background-color: transparent;
+    border: none;
+}
+
+.header__person-link {
+    margin: 0 34px 0;
+}
+
+.header__navigation {
+    display: none;
+}
+
+.header__img-ellipse {
+    position: absolute;
+    right: -10px;
+    top: -8px;
+}
+
+.brand {
+    display: flex;
+    margin: 0 0 63px;
+}
+
+.brand__img-wrapper {
+    flex-basis: 50%;
+    display: flex;
+    justify-content: flex-end;    
+    background-color: rgba(113, 103, 105, 0.08);    
+}
+
+.brand__heading-wrapper {
+    display: flex;
+    align-items: center;
+    background-color: var(--pink);       
+    padding: 0 0 0 91px;
+    flex-basis: 50%;    
+}
+
+.brand__heading {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 58px;    
+}
+
+.brand__subtitle {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    display: block;
+}
+
+.brand__subtitle-pink {
+    color: var(--dark-pink);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0)
+}
+
+.sale__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sale__item {
+    width: 360px;
+    min-height: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 30px 0;
+    background-color: var(--brown);
+}
+
+.sale__item_women {
+    background-image: url(../img/sale-woman.jpg);
+}
+
+.sale__item_men {
+    background-image: url(../img/sale-man.jpg);
+}
+
+.sale__item_kids {
+    background-image: url(../img/sale-kids.jpg);
+}
+
+.sale__item_accesories {
+    background-image: url(../img/sale-accesories.jpg);
+    width: 100%;
+    margin: 0 0 97px 0;
+}
+
+.sale__heading {
+    color: var(--white);
+    text-transform: uppercase;
+    padding: 0 0 6px 0;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.sale__text {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    text-transform: uppercase;
+    color: var(--dark-pink);
+}
+
+.products__title {
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center;
+}
+
+.products__text {
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--gray);
+    text-align: center;
+    margin: 6px 0 0;
+}
+
+.products__list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 48px 0 -30px;
+}
+
+.products__item {
+    width: 360px;
+    min-height: 581px;
+    background-color: var(--light-gray);
+    margin: 0 0 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.products__item-inner {
+    padding: 25px 16px 20px;    
+}
+
+.products__item-heading {
+    text-transform: uppercase;
+    font-size: 13px;
+    line-height: 16px;   
+    font-weight: 400; 
+}
+
+.products__item-text {
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+    color: var(--gray-products-item-text);
+    margin: 13px 0 18px;
+}
+
+.products__item-color {
+    color: var(--dark-pink);
+}
+
+.products__button {
+    text-decoration: none;
+    display: flex;
+    padding: 14px 37px;
+    width: 211px;
+    border: 1px solid var(--pink-button-border);
+    margin: 49px auto 96px;
+    color: var(--pink-button);
+}
+
+.advantages {
+    background-color: var(--black);    
+}
+
+.advantages__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 341px;
+}
+
+.advantages__item {
+    width: 360px;
+    text-align: center;
+}
+
+.advantages__item-heading {
+    color: var(--white-advantages);
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 24px;
+    margin: 28px 0 16px;
+}
+
+.advantages__item-text {
+    color: var(--white-advantages);
+    font-weight: 300;
+    font-size: 14px;
+    line-height: 17px;
+}
+
+.subscription {
+    background-image: url(../img/subscribe.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;    
+}
+
+.subscription__wrapper {
+    min-height: 448px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.subscription__contorls {
+    text-align: center;
+}
+
+.subscription__text {
+    width: 360px;
+    margin: 30px 0 0;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.subscription__text-italic {
+    font-style: italic;
+}
+
+.form {
+    width: 557px;
+    text-align: center;
+}
+
+.form__heading {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 38px;
+    text-transform: uppercase;
+}
+
+.form__text {
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 30px;
+    margin: 0 0 32px;
+}
+
+.form__inner {
+    display: flex;
+    justify-content: center;
+}
+
+.form__input {
+    width: 256px;
+    height: 49px;
+    background: #E1E1E1;
+    border: none;
+    border-radius: 20px 0 0 20px;
+    font-family: Lato;    
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    opacity: 0.67;
+    padding: 0 0 0 22px;
+    box-sizing: border-box;            
+}
+
+.form__button {
+    width: 100px;
+    height: 49px;
+    background-color: var(--dark-pink);
+    border: none;
+    border-radius: 0 20px 20px 0;
+    font-weight: 400;
+    line-height: 17px;
+    font-size: 14px;
+    color: var(--white);    
+}
+
+.contacts {
+    background-color: var(--black);
+}
+
+.contacts__wapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 79px;
+}
+
+.contacts__socials {
+    display: flex;
+    width: 148px;
+    justify-content: space-between;
+}
+
+.contacts__text {
+    color: var(--white-advantages);
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;
+}
