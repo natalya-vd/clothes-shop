@@ -1,0 +1,166 @@
+.header {
+    background-color: $black;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+        min-height: 75px;
+        align-items: center;
+    }
+    
+    &__logo-link {
+        margin: 0 41px 0 0;
+    }
+    
+    &__icon-logo {
+        fill: url(#pattern0);
+
+        &:hover {
+            fill-opacity: 0.6;
+        }
+    }   
+    
+    &__icon-loupe {
+        fill: $white;
+        cursor: pointer;
+        
+        &:hover {
+            fill: $dark-pink;
+        }
+    }
+    
+    &__controls_position {
+        position: relative;
+
+        &::before {
+            content: '5';
+            color: $white;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 14px;    
+            position: absolute;
+            right: -4px;
+            top: -7px;
+            z-index: 10;
+        }
+    }    
+    
+    /*Меню через чекбокс начало*/
+    
+    #toggle {
+        display: none;
+    }
+    
+    #toggle:checked ~ .header__navigation {
+        display: block;
+        right: 0;    
+    }
+    
+    /* .header__button {
+        background-color: transparent;
+        border: none;
+    } */
+    
+    &__navigation {
+        display: none;
+        width: 100vw;
+        min-height: 764px;
+        background: rgba(0, 0, 0, 0.5);
+        position: absolute;
+        top: 53px;
+        right: -100vw;
+        z-index: 5;
+
+        &-list {    
+            padding: 37px 33px 0;
+            box-sizing: border-box;
+            min-height: 765px;
+            width: 232px;
+            background-color: $white;
+            position: absolute;
+            right: -232px;
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21); 
+        }
+
+        &-title {
+            @include font(14px, 17px, 700);            
+            text-transform: uppercase;
+            margin: 0 0 24px;
+        }
+
+        &-item {
+            margin: 0 0 20px;    
+        }
+
+        &-heading {
+            @include font(14px, 17px);            
+            text-transform: uppercase;
+            color: $dark-pink;
+        }
+        
+        &-item-inner {
+            padding: 12px 0 0 22px;
+        }
+        
+        &-link {
+            @include font(14px, 17px);
+            text-decoration: none;            
+            color: $dull-gray;
+            margin: 0 0 11px;
+            display: block;
+
+            &:hover {
+                color: $dark-pink;
+            }
+        }    
+    }   
+    
+    &__icon-menu {
+        fill: $white;
+        cursor: pointer;
+
+        &:hover {
+            fill: $dark-pink;
+        }
+    }
+    
+    &__menu-close {
+        position: absolute;
+        top: 16px;
+        right: 16px;
+        fill: $dull-gray;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.75;;
+        }
+    }
+    
+    /*Меню через чекбокс конец*/
+    
+    &__person-link {
+        margin: 0 34px 0;
+    }
+    
+    &__icon-registration {
+        fill: $white;
+
+        &:hover {
+            fill: $dark-pink;
+        }
+    }
+    
+    &__icon-cart {
+        fill: $white;
+
+        &:hover {
+            fill: $dark-pink;
+        }
+    }  
+    
+    &__img-ellipse {
+        position: absolute;
+        right: -10px;
+        top: -8px;
+    }
+}

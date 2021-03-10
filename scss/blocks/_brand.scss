@@ -1,0 +1,43 @@
+.brand {
+    display: flex;
+    margin: 0 0 63px;
+
+    &__img-wrapper {    
+        display: flex;
+        flex-basis: 50%;
+        justify-content: flex-end;    
+        background-color: rgba(113, 103, 105, 0.08);    
+    }
+    
+    &__heading-wrapper {
+        display: flex;
+        flex-basis: 50%;
+        align-items: center;
+        background-color: $pink;       
+        padding: 0 0 0 91px; 
+    }
+    
+    &__heading {
+        @include font(48px, 58px, 900);
+        text-transform: uppercase;                
+        position: relative; 
+        
+        &::before {
+            content: '';
+            width: 12px;
+            height: 92px;
+            background-color: $dark-pink;    
+            position: absolute;
+            left: -28px;
+        }
+    }    
+    
+    &__subtitle {
+        @include font(32px, 38px, 700);        
+        display: block;
+
+        &-pink {
+            color: $dark-pink;
+        }
+    }
+}

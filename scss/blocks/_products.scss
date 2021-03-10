@@ -1,0 +1,118 @@
+.products {
+
+    &__title {
+        @include font(30px, 36px);        
+        text-align: center;
+        margin: 0 0 6px;
+    }
+    
+    &__text {
+        font-size: 14px;
+        line-height: 17px;
+        color: $gray;
+        text-align: center;
+        margin: 0 0 48px;
+    }
+    
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin: 0 0 19px;
+    }
+    
+    &__item {
+        width: 360px;
+        min-height: 581px;
+        background-color: $smoky-gray;
+        margin: 0 0 30px;
+        
+        &-img {
+            width: 360px;
+            min-height: 420px;
+            display: block;
+        }
+        
+        &-inner {
+            padding: 25px 16px 20px;    
+        }
+        
+        &-heading {
+            text-transform: uppercase;
+            @include font(13px, 16px);     
+        }
+        
+        &-text {
+            @include font(14px, 17px, 300);   
+            color: $dull-gray;
+            margin: 13px 0 18px;
+        }
+        
+        &-price {
+            color: $dark-pink;
+        }
+    }
+    
+    &__wrapper-overlay {
+        position: relative;    
+    }
+
+    &__item:hover &__wrapper-overlay::before {    
+        content: '';
+        width: 360px;
+        min-height: 420px;
+        background: rgba(58, 56, 56, 0.86);
+        position: absolute;
+        top: 0;
+        left: 0;   
+    }
+    
+    &__button-cart {
+        font-family: 'Lato';
+        display: none;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: $white;
+        border: 1px solid $white;
+        background-color: transparent;
+        padding: 13px 16px 13px 50px;
+        @include font(14px, 17px);        
+        cursor: pointer;
+        outline: none;
+        
+        &::before {
+            content: '';
+            width: 27px;
+            height: 25px;    
+            background-image: url(../img/cart-hover.svg);
+            position: absolute;    
+            left: 13px;
+            top: 9px;   
+        }
+
+        &:active {
+            border: 1px solid $dark-pink;
+        }
+    }
+    
+    &__item:hover &__button-cart {
+        display: block;    
+    }
+    
+    &__button {
+        text-decoration: none;
+        display: flex;
+        padding: 14px 37px;
+        width: 211px;
+        border: 1px solid $bittersweet;
+        margin: 0 auto 96px;
+        color: $dark-pink;
+
+        &:hover {
+            color: $white;
+            background-color: $dark-pink;
+        }
+    }   
+}

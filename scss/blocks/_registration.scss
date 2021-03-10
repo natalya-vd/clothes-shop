@@ -1,0 +1,138 @@
+.registration {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 96px;
+
+    &__form {
+        width: 360px;
+    }
+    
+    &__inner {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    &__legend {
+        @include font(16px, 19px, 300);        
+        color: $black;    
+    }
+    
+    &__input {
+        @include font(13px, 16px, 300);        
+        padding: 14px 0 14px 17px;
+        margin: 21px 0 0;
+        box-sizing: border-box;
+        border: 1px solid $white-aluminum;
+
+        &:focus {
+            border: 1px solid $dark-pink;
+            outline: none;    
+        }
+
+        &:hover {
+            opacity: 0.65;
+        }
+    }
+    
+    &__radio-control {
+        margin: 32px 0 33px;
+        display: flex;
+    }
+    
+    &__radio-input {
+        display: none;
+    }
+    
+    &__radio-label {
+        @include font(11px, 13px, 300);        
+        color: $black;
+        margin: 0 20px 0 0;
+        display: flex;
+        align-items: center;
+
+        &::before {
+            content: '';
+            border: 1px solid $white-aluminum;
+            border-radius: 50%;
+            width: 17px;
+            height: 17px;
+            margin: 0 10px 0 0;
+        }
+
+        &:hover {
+            font-weight: 600;
+        }
+    }
+    
+    &__radio-input:checked + &__radio-label::before {
+        background-image: url(../img/tick.svg);
+        background-repeat: no-repeat;
+        background-size: 15px;
+        background-position: center;
+        border: 1px solid $dark-pink;
+    }
+    
+    &__text {
+        @include font(13px, 16px, 300);        
+        color: $light-gray;
+        margin: 16px 0 39px;
+    }
+    
+    &__button {
+        font-family: 'Lato';
+        width: 167px;
+        @include font(14px, 17px);        
+        text-transform: uppercase;
+        color: $white;
+        background-color: $dark-pink;
+        padding: 16px 0 16px 29px;
+        box-sizing: border-box;
+        text-align: left;
+        border: none;
+        position: relative;
+        cursor: pointer;
+        outline: none;
+
+        &::after {
+            content: '';
+            background-image: url(../img/button-arrow.svg);
+            width: 17px;
+            height: 10px;
+            position: absolute;
+            top: 20px;
+            right: 20px;   
+        }
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+    
+    &__info {
+        width: 652px;
+        @include font(24px, 29px, 300);
+
+        &-title {
+            text-transform: uppercase;
+            @include font(24px, 29px, 300);
+        }
+        
+        &-text {
+            margin: 22px 0 21px;
+        }
+        
+        &-item {
+            margin: 0 0 16px;
+            display: flex;
+            align-items: center;
+    
+            &::before {
+                content: '';
+                background-image: url(../img/tick.svg);
+                width: 20px;
+                height: 16px;    
+                margin: 0 23px 0 0;
+            }
+        }
+    }
+}

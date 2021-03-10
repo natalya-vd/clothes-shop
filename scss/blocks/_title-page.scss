@@ -1,0 +1,20 @@
+.title-page {
+    background-color: $smoky-pink;
+    min-height: 148px;
+    display: flex;
+    align-items: center;
+
+    &__heading {
+        @include font(24px, 29px);        
+        text-transform: uppercase;
+        color: $dark-pink;
+    }
+
+    &_m-reg {
+        margin: 0 0 64px;
+    }
+
+    &_m-cart {
+        margin: 0 0 96px;
+    }
+}
