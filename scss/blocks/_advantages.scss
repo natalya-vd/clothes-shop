@@ -1,0 +1,39 @@
+.advantages {
+    background-color: $black;
+    
+    &__list {
+        @include flex-s-b-c();
+        min-height: 341px;
+    }
+    
+    &__item {
+        width: 360px;
+        text-align: center;
+
+        &-car {
+            fill: $dark-pink;
+            margin: 0 0 28px;
+        }
+
+        &-discounts {
+            fill: $dark-pink;
+            margin: 0 0 20px;
+        }
+
+        &-crown {
+            fill: $dark-pink;
+            margin: 0 0 25px;
+        }
+
+        &-heading {
+            color: $white;
+            @include font(20px, 24px);            
+            margin: 0 0 16px;
+        }
+        
+        &-text {
+            color: $white;
+            @include font(14px, 17px, 300);            
+        }
+    }    
+}

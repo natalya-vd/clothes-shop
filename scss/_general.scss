@@ -1,0 +1,33 @@
+body {
+    font-family: Lato;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 19px;    
+}
+
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.inner{
+    flex-grow: 1;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.container {
+    width: 1140px;
+    margin: 0 auto;
+}

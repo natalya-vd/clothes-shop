@@ -1,0 +1,223 @@
+.cart {    
+    margin: 0 auto 128px;
+
+    &__form {
+        display: flex;
+        justify-content: space-between;
+
+        &-list {
+            margin: 0 0 73px;
+        }
+
+        &-item {
+            display: flex;
+            margin: 0 0 40px;
+            box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
+            width: 652px;
+            position: relative;        
+    
+            &:hover {
+                box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.33));
+            }
+    
+            &-inner {
+                padding: 22px 22px 0 31px;
+            }
+    
+            &-close {
+                position: absolute;
+                top: 28px;
+                right: 22px;
+                fill: $dull-gray;
+                cursor: pointer;
+    
+                &:hover {
+                    opacity: 0.75;
+                }
+            }
+    
+            &-heading {
+                text-transform: uppercase;
+                @include font(24px, 29px);
+                width: 262px;
+                margin: 0 0 42px;
+    
+                &-block {
+                    display: block;
+                }
+            }
+    
+            &-text {
+                @include font(22px, 26px);
+                margin: 0 0 6px;
+                color: $dull-gray;
+    
+                &-pink {
+                    color: $dark-pink;
+                }
+            }
+    
+            &-row {
+                display: flex;
+            }
+    
+            &-input {
+                @include font(18px, 22px);
+                width: 44px;
+                height: 25px;
+                margin: 0 0 0 24px;
+                width: 44px;            
+                box-sizing: border-box;
+                outline: none;
+                text-align: center;
+                color: $dull-gray;
+                border: 1px solid $gainsborough;
+                
+                &:focus {
+                    border: 1px solid $dark-pink;
+                }
+                
+                &:hover {
+                    box-shadow: (3px 5px 10px rgba(0, 0, 0, 0.16));
+                }
+            }
+        }
+    }
+
+    &__button-group {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__button {
+        font-family: 'Lato';
+        @include font(14px, 17px, 300);
+        text-transform: uppercase;        
+        padding: 16px 40px;
+        background-color: $white;
+        color: $black;
+        outline: none;
+        border: 1px solid $gray;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $dark-pink;
+            color: $white;
+            border: 1px solid $smoky-pink;
+        }
+
+        &:active {
+            border: 1px solid $black;
+        }
+    }
+
+    &__form-address {
+        width: 360px;   
+    }
+
+    &__form-fieldset {
+        display: flex;
+        flex-direction: column;
+        margin: 0 0 3px;
+    }
+
+    &__form-legend {
+        @include font(16px, 19px, 300);
+        text-transform: uppercase;
+        margin: 0 0 20px;
+    }
+
+    &__form-input {
+        @include font(13px, 16px, 300);
+        padding: 14px 0 14px 17px;
+        margin: 0 0 21px;
+        outline: none;
+        border: 1px solid $gray;
+
+        &:hover {
+            opacity: 0.65;
+        }
+
+        &:focus {
+            border: 1px solid $dark-pink;
+        }
+    }
+
+    &__form-button {
+        font-family: 'Lato';
+        @include font(11px, 13px, 300);
+        text-transform: uppercase;
+        width: 108px;
+        padding: 11px 15px;
+        box-sizing: border-box;
+        background-color: $white;
+        outline: none;
+        border: 1px solid $gray;        
+        margin: 0 0 58px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $dark-pink;
+            color: $white;
+            border: 1px solid $smoky-pink;
+        }
+
+        &:active {
+            border: 1px solid $black;
+        }
+    }
+
+    &__form-sum {
+        min-height: 214px;
+        background-color: $smoky-gray;
+        padding: 40px 43px;
+    }
+
+    &__form-text-subtotal {
+        @include font(11px, 13px);
+        text-transform: uppercase;
+        text-align: end;
+        color: $black;
+        margin: 0 0 12px;
+
+        &-m {
+            margin: 0 0 0 25px;
+        }
+    }
+
+    &__form-text-total {
+        @include font(16px, 19px 300);
+        text-transform: uppercase;
+        text-align: end;
+        color: $black;
+        margin: 0 0 21px;
+
+        &-pink {
+            color: $dark-pink;
+            font-weight: 700;
+            margin: 0 0 0 20px;
+        }
+    }
+
+    &__form-line {
+        color: $gainsborough;
+        margin: 0 0 17px;
+    }
+
+    &__form-button-submit {
+        font-family: 'Lato';
+        @include font(16px, 19px, 300);
+        text-transform: uppercase;
+        color: $white;        
+        padding: 15px 42px;
+        box-sizing: border-box;
+        background-color: $dark-pink;
+        outline: none;
+        border: none;
+        cursor: pointer;
+
+        &:hover {
+            opacity: 0.75;
+        }
+    }
+}

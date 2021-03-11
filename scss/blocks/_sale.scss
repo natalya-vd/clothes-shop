@@ -1,0 +1,49 @@
+.sale {
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    
+    &__item {
+        width: 360px;
+        min-height: 260px;
+        @include flex-center();        
+        flex-direction: column;
+        margin: 0 0 30px 0;
+        background-color: $brown;
+
+        &_women {
+            background-image: url(../img/sale-woman.jpg);
+        }
+        
+        &_men {
+            background-image: url(../img/sale-man.jpg);
+        }
+        
+        &_kids {
+            background-image: url(../img/sale-kids.jpg);
+        }
+        
+        &_accesories {
+            background-image: url(../img/sale-accesories.jpg);
+            width: 100%;
+            min-height: 180px;
+            margin: 0 0 97px;
+        }
+    }    
+    
+    &__heading {        
+        color: $white;
+        text-transform: uppercase;
+        padding: 0 0 6px 0;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    &__text {
+        @include font(24px, 29px, 700);        
+        text-transform: uppercase;
+        color: $dark-pink;
+    }
+}
