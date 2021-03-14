@@ -4,11 +4,21 @@
     &__list {
         @include flex-s-b-c();
         min-height: 341px;
+
+        @include tablet {
+            flex-direction: column;
+            padding: 48px 0 16px;
+        }
+
+        @include mobile {
+            padding: 48px 8px 33px;
+        }
     }
     
     &__item {
         width: 360px;
         text-align: center;
+        margin: 0 10px 0 0;
 
         &-car {
             fill: $dark-pink;
@@ -34,6 +44,14 @@
         &-text {
             color: $white;
             @include font(14px, 17px, 300);            
+        }
+
+        @include tablet {
+            margin: 0 0 48px;
+        }
+
+        @include mobile {
+            width: 100%;
         }
     }    
 }

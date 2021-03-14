@@ -1,30 +1,84 @@
 .cart {    
     margin: 0 auto 128px;
 
+    @include mobile {
+        margin: 0 auto 96px;
+    }
+
     &__form {
         display: flex;
         justify-content: space-between;
 
+        @include width-1024 {
+            flex-direction: column;
+        }
+
+        &-product {
+            width: 652px;
+
+            @include desktop {
+                width: 57%;
+            }
+
+            @include width-1024 {
+                width: 100%;
+            }
+        }
+
         &-list {
             margin: 0 0 73px;
+
+            @include width-1024 {
+                margin: 0 0 62px;
+            }
+
+            @include mobile {
+                margin: 0 0 30px;
+            }
         }
 
         &-item {
             display: flex;
             margin: 0 0 40px;
             box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.13));
-            width: 652px;
-            position: relative;        
+            position: relative;
+
+            @include mobile {
+                margin: 0 0 32px;
+                box-shadow: (8px 8px 21px rgba(0, 0, 0, 0.13));
+                min-height: 188px;
+            }
     
             &:hover {
                 box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.33));
             }
+
+            &-img {
+                @include desktop {
+                    width: 40%;
+                    height: auto;
+                }
+
+                @include tablet {
+                    width: 36%;
+                }
+
+                @include mobile {
+                    width: 40%;
+                }
+            }
     
             &-inner {
                 padding: 22px 22px 0 31px;
+
+                @include mobile {
+                    padding: 14px 0 0 17px;
+                }
             }
     
             &-close {
+                width: 18px;
+                height: 18px;
                 position: absolute;
                 top: 28px;
                 right: 22px;
@@ -34,6 +88,13 @@
                 &:hover {
                     opacity: 0.75;
                 }
+
+                @include mobile {
+                    width: 10px;
+                    height: 10px;
+                    top: 17px;
+                    right: 12px;
+                }
             }
     
             &-heading {
@@ -41,9 +102,11 @@
                 @include font(24px, 29px);
                 width: 262px;
                 margin: 0 0 42px;
-    
-                &-block {
-                    display: block;
+
+                @include mobile {
+                    @include font(16px, 19px);
+                    width: 144px;
+                    margin: 0 0 26px;
                 }
             }
     
@@ -54,6 +117,11 @@
     
                 &-pink {
                     color: $dark-pink;
+                }
+
+                @include mobile {
+                    @include font(14px, 17px);
+                    margin: 0 0 4px;
                 }
             }
     
@@ -80,6 +148,12 @@
                 &:hover {
                     box-shadow: (3px 5px 10px rgba(0, 0, 0, 0.16));
                 }
+
+                @include mobile {
+                    @include font(10px, 12px);
+                    width: 24px;
+                    height: 15px;
+                }
             }
         }
     }
@@ -87,6 +161,16 @@
     &__button-group {
         display: flex;
         justify-content: space-between;
+
+        @include width-1024 {
+            justify-content: space-evenly;
+            margin: 0 0 65px;
+        }
+
+        @include mobile {
+            justify-content: space-between;
+            margin: 0 0 48px;
+        }
     }
 
     &__button {
@@ -100,6 +184,13 @@
         border: 1px solid $gray;
         cursor: pointer;
 
+        @include mobile {
+            @include font(12px, 14px);
+            padding: 9px 18px;
+            width: 174px;
+            min-height: 32px;
+        }
+
         &:hover {
             background-color: $dark-pink;
             color: $white;
@@ -112,7 +203,36 @@
     }
 
     &__form-address {
-        width: 360px;   
+        width: 360px;
+        
+        @include desktop {
+            width: 32%;
+        }
+
+        @include width-1024 {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        @include mobile {
+            flex-direction: column;
+        }
+    }
+
+    &__form-inner {
+        margin: 0 0 58px;
+
+        @include width-1024 {
+            width: 49%;
+            margin: 0;
+        }
+
+        @include mobile {
+            width: 100%;
+            margin: 0 0 49px;
+        }
     }
 
     &__form-fieldset {
@@ -152,8 +272,7 @@
         box-sizing: border-box;
         background-color: $white;
         outline: none;
-        border: 1px solid $gray;        
-        margin: 0 0 58px;
+        border: 1px solid $gray;
         cursor: pointer;
 
         &:hover {
@@ -171,6 +290,14 @@
         min-height: 214px;
         background-color: $smoky-gray;
         padding: 40px 43px;
+
+        @include width-1024 {
+            width: 49%;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
     }
 
     &__form-text-subtotal {
@@ -186,7 +313,7 @@
     }
 
     &__form-text-total {
-        @include font(16px, 19px 300);
+        @include font(16px, 19px, 300);
         text-transform: uppercase;
         text-align: end;
         color: $black;
