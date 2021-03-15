@@ -35,6 +35,12 @@
     }
 }
 
+@mixin width-480 {
+    @media (max-width: $width-480) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (max-width: $mobile-width) {
         @content;

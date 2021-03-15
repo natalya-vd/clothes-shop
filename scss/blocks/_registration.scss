@@ -3,7 +3,7 @@
     justify-content: space-between;
     margin: 0 auto 96px;
 
-    @include mobile {
+    @include width-480 {
         flex-direction: column;
     }
 
@@ -18,7 +18,7 @@
             width: 49%;
         }
 
-        @include mobile {
+        @include width-480 {
             width: 100%;
             margin: 0 0 40px;
         }
@@ -146,7 +146,7 @@
             width: 48%;
         }
 
-        @include mobile {
+        @include width-480 {
             width: 100%;
         }
 

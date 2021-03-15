@@ -35,9 +35,12 @@
             margin: 0 0 65px;
         }
 
+        @include width-480 {
+            width: 100%;
+        }
+
         @include mobile {
             margin: 0 0 59px;
-            width: 100%;
         }
     }
 
@@ -65,8 +68,11 @@
             width: 100%;
         }
 
-        @include mobile {
+        @include width-480 {
             width: 100%;
+        }
+
+        @include mobile {
             @include font(18px, 22px);
         }
     }
@@ -164,7 +170,7 @@
             width: 50%;
         }
 
-        @include mobile {
+        @include width-480 {
             width: 100%;
         }
     }
