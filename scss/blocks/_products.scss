@@ -12,6 +12,14 @@
         color: $gray;
         text-align: center;
         margin: 0 0 48px;
+
+        @include tablet {
+            margin: 0 0 73px;
+        }
+
+        @include mobile {
+            margin: 0 0 65px;
+        }
     }
     
     &__list {
@@ -19,6 +27,14 @@
         justify-content: space-between;
         flex-wrap: wrap;
         margin: 0 0 19px;
+
+        @include tablet {
+            margin: 0 0 17px;
+        }
+
+        @include mobile {
+            margin: 0 0 25px;
+        }
     }
     
     &__item {
@@ -26,11 +42,30 @@
         min-height: 581px;
         background-color: $smoky-gray;
         margin: 0 0 30px;
+
+        @include desktop {
+            width: 32%;
+            min-height: auto;
+        }
+
+        @include tablet {
+            width: 49%;
+            min-height: auto;
+            margin: 0 0 16px;
+        }
+
+        @include mobile {
+            width: 100%;
+        }
         
         &-img {
             width: 360px;
-            min-height: 420px;
+            min-height: 100%;
             display: block;
+
+            @include desktop {
+                width: 100%;
+            }
         }
         
         &-inner {
@@ -59,12 +94,12 @@
 
     &__item:hover &__wrapper-overlay::before {    
         content: '';
-        width: 360px;
-        min-height: 420px;
+        width: 100%;
+        min-height: 100%;
         background: rgba(58, 56, 56, 0.86);
         position: absolute;
         top: 0;
-        left: 0;   
+        left: 0;
     }
     
     &__button-cart {
@@ -113,6 +148,14 @@
         &:hover {
             color: $white;
             background-color: $dark-pink;
+        }
+
+        @include tablet {
+            margin: 0 auto 65px;
+        }
+
+        @include mobile {
+            margin: 0 auto 97px;
         }
     }   
 }

@@ -3,8 +3,25 @@
     justify-content: space-between;
     margin: 0 auto 96px;
 
+    @include width-480 {
+        flex-direction: column;
+    }
+
     &__form {
         width: 360px;
+
+        @include desktop {
+            width: 32%;
+        }
+    
+        @include width-1024 {
+            width: 49%;
+        }
+
+        @include width-480 {
+            width: 100%;
+            margin: 0 0 40px;
+        }
     }
     
     &__inner {
@@ -49,6 +66,14 @@
         margin: 0 20px 0 0;
         display: flex;
         align-items: center;
+
+        &_hidden {
+            display: none;
+
+            @include width-1024 {
+                display: flex;
+            }
+        }
 
         &::before {
             content: '';
@@ -112,26 +137,50 @@
         width: 652px;
         @include font(24px, 29px, 300);
 
+        @include desktop {
+            width: 57%;
+        }
+
+        @include width-1024 {
+            @include font(16px, 19px, 300);
+            width: 48%;
+        }
+
+        @include width-480 {
+            width: 100%;
+        }
+
         &-title {
             text-transform: uppercase;
             @include font(24px, 29px, 300);
+            margin: 0 0 22px;
+
+            @include width-1024 {
+                @include font(16px, 19px, 300);
+                margin: 0 0 32px;
+            }
         }
         
         &-text {
-            margin: 22px 0 21px;
+            margin: 0 0 21px;
+
+            @include width-1024 {
+                margin: 0 0 22px;
+            }
         }
         
         &-item {
-            margin: 0 0 16px;
-            display: flex;
-            align-items: center;
+            margin: 0 0 16px 43px;
+            position: relative;
     
             &::before {
                 content: '';
                 background-image: url(../img/tick.svg);
                 width: 20px;
-                height: 16px;    
-                margin: 0 23px 0 0;
+                height: 16px;
+                position: absolute;
+                top: 5px;
+                left: -43px;
             }
         }
     }

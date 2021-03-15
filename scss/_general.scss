@@ -30,4 +30,12 @@ body {
 .container {
     width: 1140px;
     margin: 0 auto;
+
+    @include desktop {
+        width: 71%;
+    }
+
+    @include tablet {
+        width: 96%;
+    }
 }

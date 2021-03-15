@@ -4,6 +4,10 @@
     display: flex;
     align-items: center;
 
+    @include mobile {
+        text-align: center;
+    }
+
     &__heading {
         @include font(24px, 29px);        
         text-transform: uppercase;
@@ -12,9 +16,21 @@
 
     &_m-reg {
         margin: 0 0 64px;
+
+        @include tablet {
+            margin: 0 0 40px;
+        }
     }
 
     &_m-cart {
         margin: 0 0 96px;
+
+        @include width-1024 {
+            margin: 0 0 59px;
+        }
+
+        @include mobile {
+            margin: 0 0 39px;
+        }
     }
 }

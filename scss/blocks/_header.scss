@@ -6,6 +6,14 @@
         justify-content: space-between;
         min-height: 75px;
         align-items: center;
+
+        @include tablet {
+            margin: 0 16px;
+        }
+
+        @include mobile {
+            margin: 0 8px;
+        }
     }
     
     &__logo-link {
@@ -42,6 +50,10 @@
             right: -4px;
             top: -7px;
             z-index: 10;
+
+            @include mobile {
+                display: none;
+            }
         }
     }    
     
@@ -140,6 +152,10 @@
     
     &__person-link {
         margin: 0 34px 0;
+
+        @include mobile {
+            display: none;
+        }
     }
     
     &__icon-registration {
@@ -156,11 +172,19 @@
         &:hover {
             fill: $dark-pink;
         }
+
+        @include mobile {
+            display: none;
+        }
     }  
     
     &__img-ellipse {
         position: absolute;
         right: -10px;
         top: -8px;
+
+        @include mobile {
+            display: none;
+        }
     }
 }
