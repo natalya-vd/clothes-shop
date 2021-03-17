@@ -104,7 +104,7 @@
     }
     
     &__button {
-        font-family: 'Lato';
+        font-family: 'lato', 'Arial', sans-serif;
         width: 167px;
         @include font(14px, 17px);        
         text-transform: uppercase;

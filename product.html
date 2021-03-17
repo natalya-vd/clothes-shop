@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/bootstrap.css">
+    <link rel="stylesheet" href="./css/all.css">
     <link rel="stylesheet" href="./css/style.css">
-    <title>Registration</title>
+    <title>Product</title>
 </head>
 
 <body>
@@ -108,81 +110,176 @@
                 </div>
             </header>
             <main>
-                <section class="title-page title-page_m-reg">
-                    <h1 class="title-page__heading container">
-                        registration
-                    </h1>
+                <section class="title-page title-page_m-cart mb-0">
+                    <div class="container d-flex flex-column align-items-center flex-md-row justify-content-md-between">
+                        <h1 class="title-page__heading mb-4 mb-md-0">
+                            new arrivals
+                        </h1>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb m-0">
+                                <li class="breadcrumb-item text-uppercase"><a
+                                        class="text-decoration-none text-secondary" href="#">home</a></li>
+                                <li class="breadcrumb-item text-uppercase"><a
+                                        class="text-decoration-none text-secondary" href="#">men</a></li>
+                                <li class="text-color-pink breadcrumb-item text-uppercase" aria-current="page">
+                                    new arrivals</li>
+                            </ol>
+                        </nav>
+                    </div>
                 </section>
-                <section class="registration container">
-                    <h2 class="visually-hidden">
-                        Form registration
-                    </h2>
-                    <form class="registration__form" action="#">
-                        <fieldset class="registration__inner">
-                            <legend class="registration__legend">
-                                Your Name
-                            </legend>
-                            <input class="registration__input" type="text" placeholder="First Name">
-                            <input class="registration__input" type="text" placeholder="Last Name">
-                            <div class="registration__radio-control">
-                                <input class="registration__radio-input" type="radio" id="Male" name="gender">
-                                <label class="registration__radio-label" for="Male">
-                                    Male
-                                </label>
-                                <input class="registration__radio-input" type="radio" id="Female" name="gender">
-                                <label class="registration__radio-label" for="Female">
-                                    Female
-                                </label>
-                                <input class="registration__radio-input" type="radio" id="Other" name="gender">
-                                <label class="registration__radio-label registration__radio-label_hidden" for="Other">
-                                    Other
-                                </label>
+                <section class="carousel-pr border-top border-bottom">
+                    <h2 class="visually-hidden">carousel</h2>
+                    <div id="carouselExampleControls"
+                        class="carousel-pr__wrapper carousel slide d-flex justify-content-center"
+                        data-bs-ride="carousel">
+                        <div class="carousel-pr__inner carousel-inner">
+                            <div class="carousel-pr__item carousel-item active">
+                                <img src="./img/carousel-1.jpg" class="carousel-pr__img d-block w-100" alt="Photo">
                             </div>
-                        </fieldset>
-                        <fieldset class="registration__inner">
-                            <legend class="registration__legend">
-                                Login details
-                            </legend>
-                            <input class="registration__input" type="email" placeholder="Email">
-                            <input class="registration__input" type="password" placeholder="Password">
-                            <p class="registration__text">
-                                Please use 8 or more characters, with at least 1 number and a
-                                mixture
-                                of uppercase and lowercase
-                                letters
-                            </p>
-                        </fieldset>
-                        <button class="registration__button" type="submit">
-                            join now
+                            <div class="carousel-pr__item carousel-item">
+                                <img src="./img/carousel-2.jpg" class="carousel-pr__img d-block w-100" alt="Photo">
+                            </div>
+                            <div class="carousel-pr__item carousel-item">
+                                <img src="./img/carousel-3.jpg" class="carousel-pr__img d-block w-100" alt="Photo">
+                            </div>
+                            <div class="carousel-pr__item carousel-item">
+                                <img src="./img/carousel-4.jpg" class="carousel-pr__img d-block w-100" alt="Photo">
+                            </div>
+                        </div>
+                        <button class="carousel-pr__btn carousel-control-prev" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                            <i class="carousel-pr__icon fas fa-angle-left"></i>
+                            <span class="visually-hidden">Previous</span>
                         </button>
-                    </form>
-                    <div class="registration__info">
-                        <h2 class="registration__info-title">
-                            loyalty has its perks
+                        <button class="carousel-pr__btn carousel-control-next" type="button"
+                            data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                            <i class="carousel-pr__icon fas fa-angle-right"></i>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+                </section>
+                <section class="description-pr position-relative border">
+                    <div class="description-pr__inner d-flex flex-column align-items-center text-center mx-auto">
+                        <h2 class="description-pr__heading text-color-pink fw-light text-uppercase mb-4">
+                            women collection
                         </h2>
-                        <p class="registration__info-text">
-                            Get in on the loyalty program where you can earn points and
-                            unlock
-                            serious perks. Starting with these
-                            as soon as you join:
+                        <h3 class="fs-5 fw-light text-uppercase text-secondary mb-5">
+                            moschino cheap and chic
+                        </h3>
+                        <p class="fs-6 fw-light text-secondary mb-4">
+                            Compellingly actualize fully researched processes before proactive outsourcing.
+                            Progressively
+                            syndicate collaborative architectures before cutting-edge services. Completely visualize
+                            parallel core competencies rather than exceptional portals.
+
                         </p>
-                        <ul class="registration__info-list">
-                            <li class="registration__info-item">
-                                15% off welcome offer
-                            </li>
-                            <li class="registration__info-item">
-                                Free shipping, returns and exchanges on all orders
-                            </li>
-                            <li class="registration__info-item">
-                                $10 off a purchase on your birthday
-                            </li>
-                            <li class="registration__info-item">
-                                Early access to products
-                            </li>
-                            <li class="registration__info-item">
-                                Exclusive offers & rewards
-                            </li>
-                        </ul>
+                        <p class="lh-1 fs-3 fw-light text-color-pink mb-5">
+                            $561
+                        </p>
+                        <hr class="description-pr__hr mb-5 w-100">
+                        <div class="d-flex mb-5">
+                            <div class="dropdown">
+                                <a class="description-pr__dr-text text-secondary nav-link text-uppercase" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    choose color
+                                    <i class="ms-2 fas fa-angle-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="description-pr__dr-text text-secondary nav-link text-uppercase" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    choose size
+                                    <i class="ms-2 fas fa-angle-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown">
+                                <a class="description-pr__dr-text text-secondary nav-link text-uppercase" href="#"
+                                    id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown"
+                                    aria-expanded="false">
+                                    quantity
+                                    <i class="ms-2 fas fa-angle-down"></i>
+                                </a>
+
+                                <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <button class="description-pr__btn-cart" type="button">
+                            <svg class="description-pr__btn-cart-img" width="27" height="25" viewBox="0 0 27 25"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M21.876 22.2662C21.921 22.2549 21.9423 22.2339 21.96 22.2129C21.9678 22.2037 21.9756 22.1946 21.9835 22.1855C22.02 22.1438 22.0233 22.0553 22.0224 22.0105C22.0092 21.9044 21.9185 21.8315 21.8412 21.8315C21.8375 21.8315 21.8336 21.8317 21.8312 21.8318C21.7531 21.8372 21.6653 21.9409 21.6719 22.0625C21.6813 22.1793 21.7675 22.2662 21.8392 22.2662H21.876ZM8.21954 22.2599C8.31873 22.2599 8.39935 22.1655 8.39935 22.0496C8.39935 21.9341 8.31873 21.8401 8.21954 21.8401C8.12042 21.8401 8.03973 21.9341 8.03973 22.0496C8.03973 22.1655 8.12042 22.2599 8.21954 22.2599ZM21.9995 24.2662C21.9517 24.2662 21.8878 24.2662 21.8392 24.2662C20.7017 24.2662 19.7567 23.3545 19.6765 22.198C19.5964 20.9929 20.4937 19.9183 21.6953 19.8364C21.7441 19.8331 21.7928 19.8315 21.8412 19.8315C22.9799 19.8315 23.9413 20.7324 24.019 21.8884C24.0505 22.4915 23.8741 23.0612 23.4898 23.5012C23.1055 23.9575 22.5764 24.2177 21.9995 24.2662ZM8.21954 24.2599C7.01532 24.2599 6.03973 23.2709 6.03973 22.0496C6.03973 20.8291 7.01532 19.8401 8.21954 19.8401C9.42371 19.8401 10.3994 20.8291 10.3994 22.0496C10.3994 23.2709 9.42371 24.2599 8.21954 24.2599ZM21.1984 17.3938H9.13306C8.70013 17.3938 8.31586 17.1005 8.20331 16.6775L4.27753 2.24768H1.52173C0.993408 2.24768 0.560547 1.80859 0.560547 1.27039C0.560547 0.733032 0.993408 0.292969 1.52173 0.292969H4.99933C5.43134 0.292969 5.81561 0.586304 5.9281 1.01025L9.85394 15.4391H20.5576L24.1144 7.13379H12.2578C11.7286 7.13379 11.2957 6.69373 11.2957 6.15649C11.2957 5.61914 11.7286 5.17908 12.2578 5.17908H25.5886C25.9091 5.17908 26.2141 5.34192 26.3896 5.61914C26.566 5.89539 26.5984 6.23743 26.4697 6.547L22.0795 16.807C21.9193 17.1653 21.5827 17.3938 21.1984 17.3938Z" />
+                            </svg>
+                            Add to Cart
+                        </button>
+                    </div>
+                </section>
+                <section class="product-pr">
+                    <div class="container p-0">
+                        <div class="row gy-md-3">
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card bg-light border-0">
+                                    <img src="./img/product-4.jpg" class="card-img-top" alt="Photo">
+                                    <div class="card-body">
+                                        <h5 class="lh-1 card-title text-uppercase">ellery x m'o capsule</h5>
+                                        <p class="fw-light card-text text-secondary mb-3">
+                                            Known for her sculptural takes on traditional tailoring, Australian
+                                            arbiter of cool Kym Ellery teams up with Moda Operandi.
+                                        </p>
+                                        <p class="text-color-pink card-text">
+                                            $52.00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12">
+                                <div class="card bg-light border-0">
+                                    <img src="./img/product-3.jpg" class="card-img-top" alt="Photo">
+                                    <div class="card-body">
+                                        <h5 class="lh-1 card-title text-uppercase">ellery x m'o capsule</h5>
+                                        <p class="fw-light card-text text-secondary mb-3">
+                                            Known for her sculptural takes on traditional tailoring, Australian
+                                            arbiter of cool Kym Ellery teams up with Moda Operandi.
+                                        </p>
+                                        <p class="text-color-pink card-text">
+                                            $52.00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-xxl-4 col-md-6 col-12 d-none d-xxl-flex">
+                                <div class="card bg-light border-0">
+                                    <img src="./img/product-6.jpg" class="card-img-top" alt="Photo">
+                                    <div class="card-body">
+                                        <h5 class="lh-1 card-title text-uppercase">ellery x m'o capsule</h5>
+                                        <p class="fw-light card-text text-secondary mb-3">
+                                            Known for her sculptural takes on traditional tailoring, Australian
+                                            arbiter of cool Kym Ellery teams up with Moda Operandi.
+                                        </p>
+                                        <p class="text-color-pink card-text">
+                                            $52.00
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </section>
             </main>
@@ -294,6 +391,8 @@
             </section>
         </footer>
     </div>
+    <script src="./js/bootstrap.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
