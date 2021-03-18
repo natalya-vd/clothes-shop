@@ -1,0 +1,178 @@
+.carousel-pr {
+    background-color: $smoky-gray;
+    
+
+    &__wrapper {
+        height: 777px;
+
+        @include tablet {
+            height: 624px;
+        }
+    }
+    
+    &__inner {
+        width: 597px;
+        margin: auto;
+
+        @include tablet {
+            width: 466px;
+        }
+
+        @include mobile {
+            width: 374px;
+        }
+    }
+
+    &__item {
+        height: 724px;
+
+        @include tablet {
+            height: 565px;
+        }
+
+        @include mobile {
+            height: 454px;
+        }
+    }
+
+    &__btn {
+        opacity: 1;
+    }
+
+    &__icon {
+        width: 47px;
+        height: 47px;
+        background-color: $light-gray;
+        font-size: 22px;
+        line-height: 2;
+        color: $black;
+    }
+
+    &__btn:hover &__icon {
+        color: $dark-pink;
+    }
+
+    &__btn:focus &__icon {
+        color: $dark-pink;
+        border: 1px solid $black;
+    }
+
+    &__btn:active &__icon {
+        border: 1px solid $dark-pink;
+    }
+}
+
+.description-pr {
+    min-height: 601px;
+    padding: 64px 0;
+    box-sizing: border-box;
+    margin: -64px auto 128px;
+    background-color: $white;
+    width: 1140px;    
+
+    @include desktop {
+        width: 71%;
+    }
+
+    @include tablet {
+        margin: 0 auto 128px;
+        border-top: none !important;
+        border-left: none !important;
+        border-right: none !important;
+        width: 100%;
+    }
+
+    &__inner {
+        width: 641px;
+
+        @include desktop {
+            width: 60%;
+        }
+
+        @include width-1024 {
+            width: 80%;
+        }
+
+        @include tablet {
+            width: 83%;
+        }
+
+        @include width-480 {
+            width: 92%;
+        }
+    }
+
+    &__heading{
+        position: relative;
+
+        &::before {
+            content: '';
+            width: 63px;
+            height: 3px;
+            position: absolute;
+            bottom: -15px;
+            left: 0;
+            right: 0;
+            margin: 0 auto;
+            background-color: $dark-pink;
+        }
+    }
+
+    &__dr-text {
+        padding: 8px;
+        // @include tablet {
+        //     padding: 8px;
+        // }
+
+        @include width-480 {
+            @include font(10px, 12px);
+        }
+    }
+
+    &__hr {
+        @include width-480 {
+            width: 46% !important;
+        }
+    }
+
+    &__btn-cart {
+        font-family: 'lato', 'Arial', sans-serif;
+        color: $dark-pink;
+        border: 1px solid $dark-pink;
+        background-color: transparent;
+        padding: 13px 57px 13px 24px;
+        @include font(16px, 19px);        
+        cursor: pointer;
+        outline: none;
+
+        &-img {
+            fill: $dark-pink;
+            margin: 0 23px 0 0;
+        }
+
+        &:hover {
+            color: $white;
+            background-color: $dark-pink;
+        }
+
+        &:hover &-img {
+            fill: $white;
+        }
+
+        &:focus {
+            border: 1px solid $black;
+        }
+
+        &:active {
+            border: 1px solid $dark-pink;
+        }
+    }
+}
+
+.product-pr {
+    margin: 0 0 128px;
+}
+
+.text-color-pink {
+    color: $dark-pink;
+}

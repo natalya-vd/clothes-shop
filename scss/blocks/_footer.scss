@@ -129,7 +129,7 @@
             background: $gainsborough;
             border: none;
             border-radius: 20px 0 0 20px;
-            font-family: Lato;
+            font-family: 'lato', 'Arial', sans-serif;
             @include font(14px, 17px);
             padding: 0 0 0 22px;
             box-sizing: border-box;
@@ -146,7 +146,7 @@
         }
         
         &-button {
-            font-family: 'Lato';
+            font-family: 'lato', 'Arial', sans-serif;
             width: 100px;
             height: 49px;
             background-color: $dark-pink;

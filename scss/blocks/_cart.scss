@@ -53,7 +53,15 @@
                 box-shadow: (17px 19px 24px rgba(0, 0, 0, 0.33));
             }
 
-            &-img {
+            &-inner-img {
+                display: flex;
+                align-items: flex-end;
+                background-color: #F3EEEF;
+
+                &_c {
+                    background-color: #EDE9E6;
+                }
+
                 @include desktop {
                     width: 40%;
                     height: auto;
@@ -66,16 +74,26 @@
                 @include width-480 {
                     width: 40%;
                 }
+            }
 
-                @include mobile {
-                    width: 43%;
-                }
+            &-img {
+                width: 100%;
+                display: block;
             }
     
             &-inner {
                 padding: 22px 22px 0 31px;
 
+                @include desktop {
+                    width: 60%;
+                }
+
+                @include tablet {
+                    width: 64%;
+                }
+
                 @include width-480 {
+                    width: 60%;
                     padding: 14px 0 0 17px;
                 }
             }
@@ -105,14 +123,14 @@
                 width: 262px;
                 margin: 0 0 42px;
 
-                @include width-480 {
-                    @include font(16px, 19px);
-                    width: 144px;
-                    margin: 0 0 26px;
+                @include desktop {
+                    width: 63%;
                 }
 
-                @include mobile {
-                    width: 140px;
+                @include width-480 {
+                    @include font(16px, 19px);
+                    width: 67%;
+                    margin: 0 0 26px;
                 }
             }
     
@@ -180,7 +198,7 @@
     }
 
     &__button {
-        font-family: 'Lato';
+        font-family: 'lato', 'Arial', sans-serif;
         @include font(14px, 17px, 300);
         text-transform: uppercase;        
         padding: 16px 40px;
@@ -270,7 +288,7 @@
     }
 
     &__form-button {
-        font-family: 'Lato';
+        font-family: 'lato', 'Arial', sans-serif;
         @include font(11px, 13px, 300);
         text-transform: uppercase;
         width: 108px;
@@ -338,7 +356,7 @@
     }
 
     &__form-button-submit {
-        font-family: 'Lato';
+        font-family: 'lato', 'Arial', sans-serif;
         @include font(16px, 19px, 300);
         text-transform: uppercase;
         color: $white;        
