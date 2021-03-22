@@ -25,6 +25,7 @@
     
     &__contorls {
         text-align: center;
+        margin: 10px 0;
 
         @include width-1024 {
             width: 50%;
@@ -47,6 +48,7 @@
     &__img {
         width: 96px;
         height: 96px;
+        margin: 0 0 30px;
 
         @include mobile {
             width: 92px;
@@ -56,7 +58,6 @@
     
     &__text {
         width: 360px;
-        margin: 30px 0 0;
         font-size: 20px;
         line-height: 24px;
 
@@ -125,11 +126,10 @@
         
         &-input {
             width: 256px;
-            height: 49px;
+            min-height: 49px;
             background: $gainsborough;
             border: none;
             border-radius: 20px 0 0 20px;
-            font-family: 'lato', 'Arial', sans-serif;
             @include font(14px, 17px);
             padding: 0 0 0 22px;
             box-sizing: border-box;
@@ -139,6 +139,11 @@
                 opacity: 0.75;
             }
 
+            &:focus {
+                border: 1px solid $dark-pink;
+                outline: none;    
+            }
+
             @include mobile {
                 height: 47px;
                 width: 245px;
@@ -146,9 +151,8 @@
         }
         
         &-button {
-            font-family: 'lato', 'Arial', sans-serif;
             width: 100px;
-            height: 49px;
+            min-height: 49px;
             background-color: $dark-pink;
             border: none;
             border-radius: 0 20px 20px 0;
@@ -160,6 +164,17 @@
             &:hover {
                 opacity: 0.75;
             }
+
+            &:focus {
+                opacity: 0.75;
+            }
+
+            &:active {
+                color: $dark-pink;
+                background-color: $white;
+                border: 1px solid $dark-pink;
+            }
+
             @include mobile {
                 height: 47px;
                 width: 96px;
@@ -202,10 +217,16 @@
         display: flex;
         width: 148px;
         justify-content: space-between;
+        flex-wrap: wrap;
 
         @include mobile {
             margin: 0 0 39px;
         }
+    }
+
+    &__socials-link {
+        outline: none;
+        display: block;
     }
     
     &__icon-facebook,
@@ -219,17 +240,38 @@
         fill: $black;
     }
     
-    &__icon-facebook:hover &__socials-hover, 
-    &__icon-instagram:hover &__socials-hover,
-    &__icon-pinterest:hover &__socials-hover,
-    &__icon-twitter:hover &__socials-hover {
-        fill: $white;
-    }
-    
     &__icon-facebook:hover,
     &__icon-instagram:hover,
     &__icon-pinterest:hover,
     &__icon-twitter:hover {
         fill: $dark-pink;    
+    }
+
+    &__socials-link:hover &__socials-hover, 
+    &__socials-link:hover &__socials-hover,
+    &__socials-link:hover &__socials-hover,
+    &__socials-link:hover &__socials-hover {
+        fill: $white;
+    }
+
+    &__socials-link:focus &__icon-facebook,
+    &__socials-link:focus &__icon-instagram,
+    &__socials-link:focus &__icon-pinterest,
+    &__socials-link:focus &__icon-twitter {
+        fill: $dark-pink;
+    }
+
+    &__socials-link:active &__icon-facebook,
+    &__socials-link:active &__icon-instagram,
+    &__socials-link:active &__icon-pinterest,
+    &__socials-link:active &__icon-twitter {
+        fill: $white;
+    }
+
+    &__socials-link:active &__socials-hover,
+    &__socials-link:active &__socials-hover,
+    &__socials-link:active &__socials-hover,
+    &__socials-link:active &__socials-hover {
+        fill: $black;
     }
 }

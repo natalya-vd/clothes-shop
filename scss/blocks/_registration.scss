@@ -41,13 +41,13 @@
         box-sizing: border-box;
         border: 1px solid $white-aluminum;
 
+        &:hover {
+            opacity: 0.65;
+        }
+
         &:focus {
             border: 1px solid $dark-pink;
             outline: none;    
-        }
-
-        &:hover {
-            opacity: 0.65;
         }
     }
     
@@ -104,7 +104,6 @@
     }
     
     &__button {
-        font-family: 'lato', 'Arial', sans-serif;
         width: 167px;
         @include font(14px, 17px);        
         text-transform: uppercase;
@@ -130,6 +129,14 @@
 
         &:hover {
             opacity: 0.75;
+        }
+
+        &:focus {
+            opacity: 0.75;
+        }
+
+        &:active {
+            opacity: 1;
         }
     }
     

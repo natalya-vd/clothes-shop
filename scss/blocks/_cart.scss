@@ -79,6 +79,7 @@
             &-img {
                 width: 100%;
                 display: block;
+                height: auto;
             }
     
             &-inner {
@@ -133,6 +134,25 @@
                     margin: 0 0 26px;
                 }
             }
+
+            &-link {
+                text-decoration: none;
+                color: $black;
+
+                &:hover {
+                    color: $dark-pink;
+                }
+
+                &:focus {                
+                    text-decoration: underline;
+                    outline: none;
+                    color: $dark-pink;
+                }
+
+                &:active {
+                    text-decoration: underline;
+                }
+            }
     
             &-text {
                 @include font(22px, 26px);
@@ -151,6 +171,7 @@
     
             &-row {
                 display: flex;
+                margin: 0 0 10px 0;
             }
     
             &-input {
@@ -198,15 +219,16 @@
     }
 
     &__button {
-        font-family: 'lato', 'Arial', sans-serif;
         @include font(14px, 17px, 300);
         text-transform: uppercase;        
-        padding: 16px 40px;
+        padding: 16px 39px;
         background-color: $white;
         color: $black;
         outline: none;
         border: 1px solid $gray;
         cursor: pointer;
+        width: 235px;
+        transition: background-color 800ms, color 800ms, border 800ms;
 
         @include width-480 {
             @include font(12px, 14px);
@@ -216,6 +238,12 @@
         }
 
         &:hover {
+            background-color: $dark-pink;
+            color: $white;
+            border: 1px solid $smoky-pink;
+        }
+
+        &:focus {
             background-color: $dark-pink;
             color: $white;
             border: 1px solid $smoky-pink;
@@ -288,7 +316,6 @@
     }
 
     &__form-button {
-        font-family: 'lato', 'Arial', sans-serif;
         @include font(11px, 13px, 300);
         text-transform: uppercase;
         width: 108px;
@@ -300,6 +327,12 @@
         cursor: pointer;
 
         &:hover {
+            background-color: $dark-pink;
+            color: $white;
+            border: 1px solid $smoky-pink;
+        }
+
+        &:focus {
             background-color: $dark-pink;
             color: $white;
             border: 1px solid $smoky-pink;
@@ -356,7 +389,6 @@
     }
 
     &__form-button-submit {
-        font-family: 'lato', 'Arial', sans-serif;
         @include font(16px, 19px, 300);
         text-transform: uppercase;
         color: $white;        
@@ -369,6 +401,14 @@
 
         &:hover {
             opacity: 0.75;
+        }
+
+        &:focus {
+            opacity: 0.75;
+        }
+
+        &:active {
+            opacity: 1;
         }
     }
 }

@@ -53,6 +53,7 @@
         @include font(48px, 58px, 900);
         text-transform: uppercase;                
         position: relative;
+        margin: 10px 0;
 
         @include tablet {
             @include font(44px, 53px, 900);
