@@ -2,6 +2,8 @@
     background-color: $black;
     
     &__list {
+        padding: 10px 0;
+
         @include flex-s-b-c();
         min-height: 341px;
 
@@ -11,7 +13,7 @@
         }
 
         @include mobile {
-            padding: 48px 8px 33px;
+            padding: 48px 8px 34px;
         }
     }
     
@@ -20,38 +22,64 @@
         text-align: center;
         margin: 0 10px 0 0;
 
+        @include tablet {
+            margin: 0 0 48px;
+        }
+
+        @include mobile {
+            margin: 0 0 47px;
+            width: 100%;
+        }
+
         &-car {
             fill: $dark-pink;
-            margin: 0 0 28px;
+            margin: 0 auto 28px;
+            display: block;
+
+            @include mobile {
+                width: 43px;
+                height: 31px;
+                margin: 0 auto 27px;
+            }
         }
 
         &-discounts {
             fill: $dark-pink;
-            margin: 0 0 20px;
+            margin: 0 auto 20px;
+            display: block;
+
+            @include mobile {
+                width: 39px;
+                height: 39px;
+                margin: 0 auto 18px;
+            }
         }
 
         &-crown {
             fill: $dark-pink;
-            margin: 0 0 25px;
+            margin: 0 auto 25px;
+            display: block;
+
+            @include mobile {
+                width: 45px;
+                height: 34px;
+                margin: 0 auto 24px;
+            }
         }
 
         &-heading {
             color: $white;
             @include font(20px, 24px);            
             margin: 0 0 16px;
+
+            @include mobile {
+                margin: 0 0 15px;
+            }
         }
         
         &-text {
             color: $white;
             @include font(14px, 17px, 300);            
-        }
-
-        @include tablet {
-            margin: 0 0 48px;
-        }
-
-        @include mobile {
-            width: 100%;
         }
     }    
 }

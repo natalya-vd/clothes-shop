@@ -16,6 +16,8 @@
         flex-direction: column;
         margin: 0 0 30px;
         background-color: $brown;
+        text-align: center;
+        padding: 10px;
 
         @include tablet {
             min-height: 168px;
@@ -70,14 +72,11 @@
         color: $white;
         text-transform: uppercase;
         padding: 0 0 6px 0;
-        font-weight: 400;
-        font-size: 16px;
     }
     
     &__text {
         @include font(24px, 29px, 700);        
         text-transform: uppercase;
         color: $dark-pink;
-        text-align: center;
     }
 }

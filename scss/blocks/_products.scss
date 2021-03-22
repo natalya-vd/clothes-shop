@@ -3,7 +3,8 @@
     &__title {
         @include font(30px, 36px);        
         text-align: center;
-        margin: 0 0 6px;
+        margin: 0 auto 6px;
+        width: 75%;
     }
     
     &__text {
@@ -11,14 +12,16 @@
         line-height: 17px;
         color: $gray;
         text-align: center;
-        margin: 0 0 48px;
+        margin: 0 auto 48px;
+        width: 75%;
 
         @include tablet {
-            margin: 0 0 73px;
+            margin: 0 auto 73px;
         }
 
         @include mobile {
-            margin: 0 0 65px;
+            margin: 0 auto 65px;
+            width: 100%;
         }
     }
     
@@ -65,6 +68,7 @@
 
             @include desktop {
                 width: 100%;
+                height: auto;
             }
         }
         
@@ -75,6 +79,25 @@
         &-heading {
             text-transform: uppercase;
             @include font(13px, 16px);     
+        }
+
+        &-link {
+            text-decoration: none;
+            color: $black;
+
+            &:hover {
+                color: $dark-pink;
+            }
+
+            &:focus {                
+                text-decoration: underline;
+                outline: none;
+                color: $dark-pink;
+            }
+
+            &:active {
+                text-decoration: underline;
+            }
         }
         
         &-text {
@@ -103,7 +126,6 @@
     }
     
     &__button-cart {
-        font-family: 'lato', 'Arial', sans-serif;
         display: none;
         position: absolute;
         top: 50%;
@@ -127,6 +149,10 @@
             top: 9px;   
         }
 
+        &:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+
         &:active {
             border: 1px solid $dark-pink;
         }
@@ -144,10 +170,22 @@
         border: 1px solid $bittersweet;
         margin: 0 auto 96px;
         color: $dark-pink;
+        outline: none;
+        transition: color 1000ms;
 
         &:hover {
             color: $white;
             background-color: $dark-pink;
+        }
+
+        &:focus {
+            color: $white;
+            background-color: $dark-pink;
+        }
+
+        &:active {
+            color: $dark-pink;
+            background-color: $white;
         }
 
         @include tablet {

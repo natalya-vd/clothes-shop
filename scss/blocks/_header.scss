@@ -6,6 +6,7 @@
         justify-content: space-between;
         min-height: 75px;
         align-items: center;
+        position: relative;
 
         @include tablet {
             margin: 0 16px;
@@ -15,47 +16,114 @@
             margin: 0 8px;
         }
     }
-    
-    &__logo-link {
-        margin: 0 41px 0 0;
+
+    &__controls {
+        display: flex;
+        align-items: center;
+        max-width: 40%;
+        flex-wrap: wrap;
+        padding: 10px 0 0;
+
+        @include tablet {
+            max-width: 50%;
+        }
+
+        @include mobile {
+            max-width: 53%;
+        }
     }
     
-    &__icon-logo {
-        fill: url(#pattern0);
+    &__logo-link {
+        margin: 0 41px 10px 0;
+        outline: none;
 
         &:hover {
             fill-opacity: 0.6;
         }
-    }   
-    
-    &__icon-loupe {
-        fill: $white;
-        cursor: pointer;
-        
-        &:hover {
-            fill: $dark-pink;
+
+        &:focus {
+            outline: 1px solid $white;
+        }
+
+        &:active {
+            outline: 1px solid $pink;
         }
     }
     
-    &__controls_position {
-        position: relative;
+    &__icon-logo {
+        fill: url(#pattern0);
+    }   
 
-        &::before {
-            content: '5';
-            color: $white;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 14px;    
-            position: absolute;
-            right: -4px;
-            top: -7px;
-            z-index: 10;
+    &__form {
 
-            @include mobile {
-                display: none;
+        &-button {
+            background-color: transparent;
+            outline: none;
+            border: none;
+            position: relative;
+            z-index: 1;
+            margin: 0 0 0 8px;
+            padding: 0;
+        }
+
+        &-button:focus &-icon-loupe {
+            fill: $dark-pink;
+        }
+
+        &-button:active &-icon-loupe {
+            fill: $white;
+        }
+
+        &-icon-loupe {
+            fill: $white;
+            cursor: pointer;
+            display: block;
+            
+            &:hover {
+                fill: $dark-pink;
             }
         }
-    }    
+
+        &-input {
+            display: none;
+            width: 50%;
+            position: absolute;
+            height: 35px;
+            top: 30%;
+            padding: 0 10px 0 48px;
+            outline: none;
+            border: none;
+            border-radius: 20px;
+            background-image: url(../../img/loupe-serch.svg);
+            background-repeat: no-repeat;
+            background-position-y: 4px;
+            background-position-x: 8px;
+
+            @include tablet {
+                width: 40%;
+            }
+
+            @include width-480 {
+                width: 30%;
+            }
+
+            @include mobile {
+                width: 55%;
+            }
+
+            &:hover {
+                border: 1px solid $dark-pink;
+            }
+
+            &:focus {
+                border: 1px solid $dark-pink;
+            }
+        }
+
+        .display-block {
+            display: block;
+        }
+    }
     
     /*Меню через чекбокс начало*/
     
@@ -65,13 +133,8 @@
     
     #toggle:checked ~ .header__navigation {
         display: block;
-        right: 0;    
+        right: 0;
     }
-    
-    /* .header__button {
-        background-color: transparent;
-        border: none;
-    } */
     
     &__navigation {
         display: none;
@@ -79,11 +142,16 @@
         min-height: 764px;
         background: rgba(0, 0, 0, 0.5);
         position: absolute;
-        top: 53px;
+        top: 100%;
         right: -100vw;
-        z-index: 5;
+        z-index: 1;
+        right: 0;
 
-        &-list {    
+        @include width-480 {
+            background: none;
+        }
+
+        &-list {
             padding: 37px 33px 0;
             box-sizing: border-box;
             min-height: 765px;
@@ -91,7 +159,20 @@
             background-color: $white;
             position: absolute;
             right: -232px;
-            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21); 
+            box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+
+            @include desktop {
+                right: 0;
+            }
+
+            @include tablet {
+                right: -32px;
+            }
+
+            @include width-480 {
+                width: 96%;
+                right: -15px;
+            }
         }
 
         &-title {
@@ -130,6 +211,8 @@
     &__icon-menu {
         fill: $white;
         cursor: pointer;
+        display: block;
+        margin: 0 0 10px;
 
         &:hover {
             fill: $dark-pink;
@@ -151,7 +234,15 @@
     /*Меню через чекбокс конец*/
     
     &__person-link {
-        margin: 0 34px 0;
+        margin: 0 0 10px 34px;
+
+        &:focus {
+            outline: 1px solid $white;
+        }
+
+        &:active {
+            outline: 1px solid $pink;
+        }
 
         @include mobile {
             display: none;
@@ -165,26 +256,49 @@
             fill: $dark-pink;
         }
     }
+
+    &__cart-link {
+        position: relative;
+        margin: 0 0 10px 34px;
+
+        &::before {
+            content: '5';
+            color: $white;
+            font-weight: 400;
+            font-size: 12px;
+            position: absolute;
+            right: -10px;
+            top: -8px;
+            width: 19px;
+            height: 19px;
+            background-color: $dark-pink;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 15px;
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &:focus {
+            outline: 1px solid $white;
+        }
+
+        &:active {
+            outline: 1px solid $pink;
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
     
     &__icon-cart {
         fill: $white;
 
         &:hover {
             fill: $dark-pink;
-        }
-
-        @include mobile {
-            display: none;
-        }
-    }  
-    
-    &__img-ellipse {
-        position: absolute;
-        right: -10px;
-        top: -8px;
-
-        @include mobile {
-            display: none;
         }
     }
 }

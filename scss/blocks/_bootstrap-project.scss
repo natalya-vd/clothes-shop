@@ -120,9 +120,7 @@
 
     &__dr-text {
         padding: 8px;
-        // @include tablet {
-        //     padding: 8px;
-        // }
+        
 
         @include width-480 {
             @include font(10px, 12px);
@@ -136,7 +134,6 @@
     }
 
     &__btn-cart {
-        font-family: 'lato', 'Arial', sans-serif;
         color: $dark-pink;
         border: 1px solid $dark-pink;
         background-color: transparent;
@@ -160,11 +157,17 @@
         }
 
         &:focus {
-            border: 1px solid $black;
+            color: $white;
+            background-color: $dark-pink;
+        }
+
+        &:focus &-img {
+            fill: $white;
         }
 
         &:active {
-            border: 1px solid $dark-pink;
+            color: $dark-pink;
+            background-color: $white;
         }
     }
 }
