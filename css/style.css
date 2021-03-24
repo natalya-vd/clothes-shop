@@ -2819,7 +2819,7 @@ body {
 
 .products-gr__filter-dropdown-check:checked + .products-gr__filter-dropdown-text::before {
   border: 1px solid #F16D7F;
-  background-image: url(../../img/tick.svg);
+  background-image: url(../img/tick.svg);
 }
 
 .products-gr__list {
