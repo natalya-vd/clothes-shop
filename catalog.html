@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Catalog</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="inner">
+            <header class="header">
+                <div class="container">
+                    <div class="header__wrapper">
+                        <div class="header__controls">
+                            <a class="header__logo-link" href="index.html">
+                                <svg class="header__icon-logo" width="44" height="38" viewBox="0 0 44 38"
+                                    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                                    <rect width="44" height="38" />
+                                    <defs>
+                                        <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1"
+                                            height="1">
+                                            <use xlink:href="#image0" transform="scale(0.0227273 0.0263158)" />
+                                        </pattern>
+                                        <image id="image0" width="44" height="38"
+                                            xlink:href="data:image/png;base64,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" />
+                                    </defs>
+                                </svg>
+                            </a>
+                            <form class="header__form" action="#">
+                                <button class="header__form-button" type="submit" id="loupe">
+                                    <svg class="header__form-icon-loupe" width="27" height="28" viewBox="0 0 27 28"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M19.0596 17.6259C20.6713 15.8658 21.6282 13.6048 21.7698 11.2225C21.9113 8.84018 21.2288 6.48173 19.8369 4.54318C18.445 2.60463 16.4285 1.20404 14.126 0.576619C11.8234 -0.0508009 9.3751 0.13316 7.19217 1.09761C5.00923 2.06205 3.22463 3.74825 2.13804 5.87302C1.05145 7.9978 0.729054 10.4318 1.225 12.7661C1.72094 15.1005 3.00501 17.1932 4.86158 18.6927C6.71814 20.1922 9.03413 21.0072 11.4206 21.0009C13.673 21.004 15.8645 20.27 17.6606 18.9109L25.4086 26.7179C25.4941 26.807 25.5965 26.8781 25.7099 26.927C25.8232 26.9759 25.9452 27.0017 26.0686 27.0029C26.1923 27.0033 26.3148 26.9782 26.4283 26.9292C26.5419 26.8801 26.6441 26.8082 26.7286 26.7179C26.9025 26.537 26.9997 26.2958 26.9997 26.0449C26.9997 25.794 26.9025 25.5528 26.7286 25.3719L19.0596 17.6259ZM2.88662 10.5009C2.89946 8.81563 3.41094 7.17187 4.35659 5.77685C5.30224 4.38183 6.63972 3.29801 8.20044 2.662C9.76115 2.02599 11.4752 1.86627 13.1266 2.20298C14.7779 2.53969 16.2926 3.35775 17.4797 4.55404C18.6668 5.75033 19.4732 7.27129 19.7972 8.92519C20.1212 10.5791 19.9483 12.2919 19.3002 13.8476C18.6522 15.4034 17.5581 16.7325 16.1559 17.6674C14.7536 18.6023 13.1059 19.1011 11.4206 19.1009C9.14916 19.0901 6.97482 18.1784 5.37484 16.566C3.77486 14.9537 2.87998 12.7724 2.88662 10.5009Z" />
+                                    </svg>
+                                </button>
+                                <input class="header__form-input" type="search" id="serch" placeholder="Serch">
+                            </form>
+                        </div>
+                        <div class="header__controls">
+
+                            <input type="checkbox" id="toggle">
+                            <label for="toggle">
+                                <svg class="header__icon-menu" width="32" height="23" viewBox="0 0 32 23"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" />
+                                </svg>
+                            </label>
+
+                            <nav class="header__navigation">
+                                <ul class="header__navigation-list">
+                                    <li class="header__navigation-title">menu</li>
+                                    <li class="header__navigation-item">
+                                        <h2 class="header__navigation-heading">man</h2>
+                                        <ul class="header__navigation-item-inner">
+                                            <li><a class="header__navigation-link" href="#">Accessories</a></li>
+                                            <li><a class="header__navigation-link" href=" #">Bags</a></li>
+                                            <li><a class="header__navigation-link" href=" #">Denim</a></li>
+                                            <li><a class="header__navigation-link" href=" #">T-Shirts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__navigation-item">
+                                        <h2 class="header__navigation-heading">woman</h2>
+                                        <ul class="header__navigation-item-inner">
+                                            <li><a class="header__navigation-link" href="#">Accessories</a></li>
+                                            <li><a class="header__navigation-link" href="#">Jackets & Coats</a></li>
+                                            <li><a class="header__navigation-link" href="#">Polos</a></li>
+                                            <li><a class="header__navigation-link" href="#">T-Shirts</a></li>
+                                            <li><a class="header__navigation-link" href="#">Shirts</a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="header__navigation-item">
+                                        <h2 class="header__navigation-heading">kids</h2>
+                                        <ul class="header__navigation-item-inner">
+                                            <li><a class="header__navigation-link" href="#">Accessories</a></li>
+                                            <li><a class="header__navigation-link" href="#">Jackets & Coats</a></li>
+                                            <li><a class="header__navigation-link" href="#">Polos</a></li>
+                                            <li><a class="header__navigation-link" href="#">T-Shirts</a></li>
+                                            <li><a class="header__navigation-link" href="#">Shirts</a></li>
+                                            <li><a class="header__navigation-link" href="#">Bags</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <label for="toggle">
+                                            <svg class="header__menu-close" width="13" height="13" viewBox="0 0 13 13"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path
+                                                    d="M7.4158 6.00409L11.7158 1.71409C11.9041 1.52579 12.0099 1.27039 12.0099 1.00409C12.0099 0.73779 11.9041 0.482395 11.7158 0.294092C11.5275 0.105788 11.2721 0 11.0058 0C10.7395 0 10.4841 0.105788 10.2958 0.294092L6.0058 4.59409L1.7158 0.294092C1.52749 0.105788 1.2721 -1.9841e-09 1.0058 0C0.739497 1.9841e-09 0.484102 0.105788 0.295798 0.294092C0.107495 0.482395 0.0017066 0.73779 0.0017066 1.00409C0.0017066 1.27039 0.107495 1.52579 0.295798 1.71409L4.5958 6.00409L0.295798 10.2941C0.20207 10.3871 0.127676 10.4977 0.0769072 10.6195C0.0261385 10.7414 0 10.8721 0 11.0041C0 11.1361 0.0261385 11.2668 0.0769072 11.3887C0.127676 11.5105 0.20207 11.6211 0.295798 11.7141C0.388761 11.8078 0.499362 11.8822 0.621222 11.933C0.743081 11.9838 0.873786 12.0099 1.0058 12.0099C1.13781 12.0099 1.26852 11.9838 1.39038 11.933C1.51223 11.8822 1.62284 11.8078 1.7158 11.7141L6.0058 7.41409L10.2958 11.7141C10.3888 11.8078 10.4994 11.8822 10.6212 11.933C10.7431 11.9838 10.8738 12.0099 11.0058 12.0099C11.1378 12.0099 11.2685 11.9838 11.3904 11.933C11.5122 11.8822 11.6228 11.8078 11.7158 11.7141C11.8095 11.6211 11.8839 11.5105 11.9347 11.3887C11.9855 11.2668 12.0116 11.1361 12.0116 11.0041C12.0116 10.8721 11.9855 10.7414 11.9347 10.6195C11.8839 10.4977 11.8095 10.3871 11.7158 10.2941L7.4158 6.00409Z" />
+                                            </svg>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </nav>
+
+                            <a class="header__person-link" href="registration.html">
+                                <svg class="header__icon-registration" width="29" height="29" viewBox="0 0 29 29"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M14.5 19.937C19 19.937 22.656 15.464 22.656 9.968C22.656 4.472 19 0 14.5 0C13.3631 0.0217413 12.2463 0.303398 11.2351 0.823397C10.2239 1.34339 9.34507 2.08794 8.66602 3C7.12663 4.99573 6.30819 7.45381 6.34399 9.974C6.34399 15.465 10 19.937 14.5 19.937ZM14.5 1.813C18 1.813 20.844 5.472 20.844 9.969C20.844 14.466 17.998 18.125 14.5 18.125C11.002 18.125 8.15603 14.465 8.15503 9.969C8.15403 5.473 11 1.813 14.5 1.813ZM20.844 18.125C20.6036 18.125 20.373 18.2205 20.203 18.3905C20.033 18.5605 19.9375 18.7911 19.9375 19.0315C19.9375 19.2719 20.033 19.5025 20.203 19.6725C20.373 19.8425 20.6036 19.938 20.844 19.938C22.526 19.9399 24.1386 20.6088 25.3279 21.7982C26.5172 22.9875 27.1861 24.6 27.188 26.282C27.1875 26.5221 27.0918 26.7523 26.922 26.9221C26.7522 27.0918 26.5221 27.1875 26.282 27.188H2.71997C2.47985 27.1875 2.24975 27.0918 2.07996 26.9221C1.91016 26.7523 1.81449 26.5221 1.81396 26.282C1.81608 24.6001 2.48517 22.9877 3.67444 21.7985C4.86371 20.6092 6.47608 19.9401 8.15796 19.938C8.39824 19.938 8.62868 19.8425 8.79858 19.6726C8.96849 19.5027 9.06396 19.2723 9.06396 19.032C9.06396 18.7917 8.96849 18.5613 8.79858 18.3914C8.62868 18.2215 8.39824 18.126 8.15796 18.126C5.99541 18.1279 3.92201 18.9875 2.39258 20.5164C0.863144 22.0453 0.00264777 24.1185 0 26.281C0.000794067 27.0019 0.287502 27.693 0.797241 28.2027C1.30698 28.7125 1.99811 28.9992 2.71899 29H26.282C27.0027 28.9989 27.6936 28.7121 28.2031 28.2024C28.7126 27.6927 28.9992 27.0017 29 26.281C28.9974 24.1187 28.1372 22.0457 26.6083 20.5168C25.0793 18.9878 23.0063 18.1276 20.844 18.125Z" />
+                                </svg>
+                            </a>
+                            <a class="header__cart-link" href="cart.html">
+                                <svg class="header__icon-cart" width="33" height="29" viewBox="0 0 33 29"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M27.199 29C26.5512 28.9738 25.9396 28.6948 25.4952 28.2227C25.0509 27.7506 24.8094 27.1232 24.8225 26.475C24.8356 25.8269 25.1023 25.2097 25.5653 24.7559C26.0283 24.3022 26.6508 24.048 27.2991 24.048C27.9474 24.048 28.5697 24.3022 29.0327 24.7559C29.4957 25.2097 29.7624 25.8269 29.7755 26.475C29.7886 27.1232 29.5471 27.7506 29.1028 28.2227C28.6585 28.6948 28.0468 28.9738 27.399 29H27.199ZM7.75098 26.32C7.75098 25.79 7.90815 25.2718 8.20264 24.8311C8.49712 24.3904 8.91569 24.0469 9.4054 23.844C9.8951 23.6412 10.434 23.5881 10.9539 23.6915C11.4737 23.7949 11.9512 24.0502 12.326 24.425C12.7009 24.7998 12.9562 25.2773 13.0596 25.7972C13.163 26.317 13.1098 26.8559 12.907 27.3456C12.7041 27.8353 12.3606 28.2539 11.9199 28.5483C11.4792 28.8428 10.9611 29 10.431 29C10.0789 29.0003 9.73017 28.9311 9.40479 28.7966C9.0794 28.662 8.78374 28.4646 8.53467 28.2158C8.28559 27.9669 8.08805 27.6713 7.95325 27.3461C7.81844 27.0208 7.74902 26.6721 7.74902 26.32H7.75098ZM11.551 20.686C11.2916 20.6868 11.039 20.6024 10.8322 20.4457C10.6253 20.2891 10.4756 20.0689 10.406 19.819L5.573 2.36401H2.18005C1.86657 2.36401 1.56591 2.23947 1.34424 2.01781C1.12257 1.79614 0.998047 1.49549 0.998047 1.18201C0.998047 0.868519 1.12257 0.567873 1.34424 0.346205C1.56591 0.124537 1.86657 5.81268e-06 2.18005 5.81268e-06H6.46106C6.72055 -0.00080736 6.97309 0.0837201 7.17981 0.240568C7.38653 0.397416 7.53589 0.617884 7.60498 0.868006L12.438 18.323H25.616L29.999 8.27501H15.399C15.2409 8.27961 15.0834 8.25242 14.9359 8.19507C14.7884 8.13771 14.6539 8.05134 14.5404 7.94108C14.4269 7.83082 14.3366 7.69891 14.275 7.55315C14.2134 7.40739 14.1816 7.25075 14.1816 7.0925C14.1816 6.93426 14.2134 6.77762 14.275 6.63186C14.3366 6.4861 14.4269 6.35419 14.5404 6.24393C14.6539 6.13367 14.7884 6.0473 14.9359 5.98994C15.0834 5.93259 15.2409 5.90541 15.399 5.91001H31.812C32.0077 5.90996 32.2003 5.95866 32.3724 6.05172C32.5446 6.14478 32.6908 6.27926 32.798 6.44301C32.9058 6.60729 32.9714 6.79569 32.9889 6.99145C33.0063 7.18721 32.9752 7.38424 32.8981 7.565L27.493 19.977C27.4007 20.1876 27.249 20.3668 27.0565 20.4927C26.864 20.6186 26.6391 20.6858 26.4091 20.686H11.551Z" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </header>
+            <main>
+                <section class="title-page title-page_m-catalog">
+                    <div class="title-page__wrapper container">
+                        <h1 class="title-page__heading title-page__heading_catalog">
+                            new arrivals
+                        </h1>
+                        <nav class="title-page__navigation">
+                            <ul class="title-page__list">
+                                <li class="title-page__item title-page__item_m-left-0">
+                                    <a class="title-page__link" href="index.html">
+                                        home
+                                    </a>
+                                </li>
+                                <li class="title-page__item">
+                                    <a class="title-page__link" href="#">
+                                        men
+                                    </a>
+                                </li>
+                                <li class="title-page__item title-page__item_active">
+                                    new arrivals
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </section>
+                <section class="products-gr container">
+                    <h2 class="visually-hidden">
+                        Catalog products
+                    </h2>
+                    <form class="products-gr__filter">
+                        <div class="products-gr__filter-inner">
+                            <button class="products-gr__filter-btn" type="button">
+                                <span class="products-gr__filter-text">filter</span>
+                                <svg class="products-gr__filter-img" width="15" height="10" viewBox="0 0 15 10"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M0.833333 10H4.16667C4.625 10 5 9.625 5 9.16667C5 8.70833 4.625 8.33333 4.16667 8.33333H0.833333C0.375 8.33333 0 8.70833 0 9.16667C0 9.625 0.375 10 0.833333 10ZM0 0.833333C0 1.29167 0.375 1.66667 0.833333 1.66667H14.1667C14.625 1.66667 15 1.29167 15 0.833333C15 0.375 14.625 0 14.1667 0H0.833333C0.375 0 0 0.375 0 0.833333ZM0.833333 5.83333H9.16667C9.625 5.83333 10 5.45833 10 5C10 4.54167 9.625 4.16667 9.16667 4.16667H0.833333C0.375 4.16667 0 4.54167 0 5C0 5.45833 0.375 5.83333 0.833333 5.83333Z" />
+                                </svg>
+                            </button>
+                            <nav class="products-gr__filter-nav">
+                                <ul>
+                                    <li class="products-gr__filter-nav-item">
+                                        <h3 class="products-gr__filter-nav-title">
+                                            category
+                                        </h3>
+                                        <ul class="products-gr__filter-nav-item-inner">
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Bags
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Denim
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Hoodies & Sweatshirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Jackets & Coats
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Polos
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Shirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Shoes
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Sweaters & Knits
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    T-Shirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Tanks
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="products-gr__filter-nav-item">
+                                        <h3 class="products-gr__filter-nav-title">
+                                            brand
+                                        </h3>
+                                        <ul class="products-gr__filter-nav-item-inner">
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Bags
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Denim
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Hoodies & Sweatshirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Jackets & Coats
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Polos
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Shirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Shoes
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Sweaters & Knits
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    T-Shirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Tanks
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li class="products-gr__filter-nav-item">
+                                        <h3 class="products-gr__filter-nav-title m-0">
+                                            designer
+                                        </h3>
+                                        <ul class="products-gr__filter-nav-item-inner">
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Accessories
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Bags
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Denim
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Hoodies & Sweatshirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Jackets & Coats
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Polos
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Shirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Shoes
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Sweaters & Knits
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    T-Shirts
+                                                </a>
+                                            </li>
+                                            <li>
+                                                <a href="#" class="products-gr__filter-nav-link">
+                                                    Tanks
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+
+                        <ul class="products-gr__filter-grid">
+                            <li class="products-gr__filter-grid-item m-0">
+                                <a href="#" class="products-gr__filter-dropdown" id="dropdown">
+                                    trending now
+                                    <i class="products-gr__filter-icon fas fa-angle-down"></i>
+                                </a>
+                                <ul class="products-gr__filter-dropdown-list products-gr__filter-dropdown-list_w"
+                                    id="list">
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">denim</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">shirts</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">shoes</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">tanks</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="products-gr__filter-grid-item">
+                                <a href="#" class="products-gr__filter-dropdown" id="dropdown2">
+                                    size
+                                    <i class="products-gr__filter-icon fas fa-angle-down"></i>
+                                </a>
+                                <ul class="products-gr__filter-dropdown-list" id="list2">
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">xs</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">s</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">m</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">l</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="products-gr__filter-grid-item">
+                                <a href="#" class="products-gr__filter-dropdown" id="dropdown3">
+                                    price
+                                    <i class="products-gr__filter-icon fas fa-angle-down"></i>
+                                </a>
+                                <ul class="products-gr__filter-dropdown-list" id="list3">
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">&lt; 100$</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">101-200$</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">201-300$</span>
+                                        </label>
+                                    </li>
+                                    <li class="products-gr__filter-dropdown-item">
+                                        <label class="products-gr__filter-dropdown-label">
+                                            <input class="products-gr__filter-dropdown-check" type="checkbox">
+                                            <span class="products-gr__filter-dropdown-text">&gt; 300$</span>
+                                        </label>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+
+
+                    </form>
+                    <ul class="products-gr__list">
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-1.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-2.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-3.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-4.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-5.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-6.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-7.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-8.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                        <li class="products-gr__item">
+                            <div class="products-gr__wrapper-overlay">
+                                <img class="products-gr__item-img" src="./img/catalog/catalog-9.jpg" alt="Product"
+                                    width="360" height="420">
+                                <button class="products-gr__button-cart" type="button">
+                                    Add to Cart
+                                </button>
+                            </div>
+                            <div class="products-gr__item-inner">
+                                <h3 class="products-gr__item-heading">
+                                    <a class="products-gr__item-link" href="./product.html">
+                                        ellery x m'o capsule
+                                    </a>
+                                </h3>
+                                <p class="products-gr__item-text">
+                                    Known for her sculptural takes on traditional tailoring,
+                                    Australian arbiter of cool Kym
+                                    Ellery teams up with Moda Operandi.
+                                </p>
+                                <p class="products-gr__item-price">
+                                    $52.00
+                                </p>
+                            </div>
+                        </li>
+                    </ul>
+                    <nav class="products-gr__pagination">
+                        <ul class="products-gr__pagination-list">
+                            <li>
+                                <a class="products-gr__pagination-link" href="#">
+                                    <i class="products-gr__pagination-icon fas fa-angle-left"></i>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="products-gr__pagination-link products-gr__pagination-link_active" href="#">
+                                    1
+                                </a>
+                            </li>
+                            <li>
+                                <a class="products-gr__pagination-link" href="#">
+                                    2
+                                </a>
+                            </li>
+                            <li>
+                                <a class="products-gr__pagination-link" href="#">
+                                    3
+                                </a>
+                            </li>
+                            <li>
+                                <a class="products-gr__pagination-link" href="#">
+                                    4
+                                </a>
+                            </li>
+                            <li>
+                                <a class="products-gr__pagination-link" href="#">
+                                    5
+                                </a>
+                            </li>
+                            <li>
+                                <ul class="products-gr__pagination-inner">
+                                    <li>
+                                        <a class="products-gr__pagination-link" href="#">
+                                            6
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="products-gr__pagination-link" href="#">
+                                            .....
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="products-gr__pagination-link" href="#">
+                                            20
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a class="products-gr__pagination-link" href="#">
+                                    <i class="products-gr__pagination-icon fas fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
+                </section>
+            </main>
+        </div>
+        <footer>
+            <section class="subscription">
+                <div class="container subscription__wrapper">
+                    <h2 class="visually-hidden">
+                        Subscription
+                    </h2>
+                    <div class="subscription__contorls">
+                        <img class="subscription__img" src="./img/smile-woman.png" alt="Photo" width="96" height="96">
+                        <p class="subscription__text">
+                            “Vestibulum quis porttitor dui! Quisque viverra nunc mi, <span
+                                class="subscription__text-italic">a pulvinar purus condimentum“</span>
+                        </p>
+                    </div>
+                    <form action="#" class="subscription__form">
+                        <h3 class="subscription__form-heading">
+                            subscribe
+                        </h3>
+                        <p class="subscription__form-text">
+                            for our newletter and promotion
+                        </p>
+                        <div class="subscription__form-inner">
+                            <input type="email" placeholder="Enter Your Email" class="subscription__form-input">
+                            <button type="submit" class="subscription__form-button">
+                                Subscribe
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+            <section class="contacts">
+                <div class="container contacts__wrapper">
+                    <h2 class="visually-hidden">
+                        Сontacts
+                    </h2>
+                    <p class="contacts__text">
+                        &copy; 2021 Brand All Rights Reserved.
+                    </p>
+                    <ul class="contacts__socials">
+                        <li>
+                            <a href="#" class="contacts__socials-link">
+                                <svg class="contacts__icon-facebook" width="32" height="32" viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.4506 0H0V32H31.4506V0Z" />
+                                    <path class="contacts__socials-hover"
+                                        d="M19.0884 16.28L19.5069 13.616H16.8902V11.8873C16.8902 11.1585 17.2557 10.4481 18.4277 10.4481H19.6172V8.17997C19.6172 8.17997 18.5377 8 17.5056 8C15.3507 8 13.9422 9.27593 13.9422 11.5857V13.616H11.5469V16.28H13.9422V22.72H16.8902V16.28H19.0884Z" />
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contacts__socials-link">
+                                <svg class="contacts__icon-instagram" width="33" height="32" viewBox="0 0 33 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M32.1889 0H0.738281V32H32.1889V0Z" />
+                                    <g clip-path="url(#clip0)">
+                                        <path class="contacts__socials-hover"
+                                            d="M16.139 12.6816C14.0238 12.6816 12.3177 14.3849 12.3177 16.4966C12.3177 18.6083 14.0238 20.3117 16.139 20.3117C18.2541 20.3117 19.9602 18.6083 19.9602 16.4966C19.9602 14.3849 18.2541 12.6816 16.139 12.6816ZM16.139 18.9769C14.7721 18.9769 13.6547 17.8646 13.6547 16.4966C13.6547 15.1287 14.7688 14.0164 16.139 14.0164C17.5092 14.0164 18.6233 15.1287 18.6233 16.4966C18.6233 17.8646 17.5058 18.9769 16.139 18.9769ZM21.0078 12.5255C21.0078 13.0203 20.6087 13.4154 20.1165 13.4154C19.621 13.4154 19.2252 13.0169 19.2252 12.5255C19.2252 12.0341 19.6243 11.6357 20.1165 11.6357C20.6087 11.6357 21.0078 12.0341 21.0078 12.5255ZM23.5386 13.4287C23.4821 12.2367 23.2094 11.1808 22.3347 10.3109C21.4634 9.44097 20.4058 9.1687 19.2119 9.10894C17.9814 9.03921 14.2932 9.03921 13.0627 9.10894C11.8721 9.16538 10.8145 9.43765 9.93987 10.3076C9.06522 11.1775 8.79584 12.2333 8.73597 13.4253C8.66613 14.6539 8.66613 18.3361 8.73597 19.5646C8.79251 20.7566 9.06522 21.8124 9.93987 22.6824C10.8145 23.5523 11.8688 23.8246 13.0627 23.8843C14.2932 23.9541 17.9814 23.9541 19.2119 23.8843C20.4058 23.8279 21.4634 23.5556 22.3347 22.6824C23.2061 21.8124 23.4788 20.7566 23.5386 19.5646C23.6085 18.3361 23.6085 14.6572 23.5386 13.4287ZM21.949 20.8828C21.6895 21.5335 21.1874 22.0349 20.5322 22.2972C19.5511 22.6857 17.2231 22.596 16.139 22.596C15.0548 22.596 12.7235 22.6824 11.7457 22.2972C11.0939 22.0382 10.5917 21.5369 10.329 20.8828C9.93987 19.9033 10.0297 17.5791 10.0297 16.4966C10.0297 15.4142 9.9432 13.0867 10.329 12.1105C10.5884 11.4597 11.0906 10.9583 11.7457 10.696C12.7268 10.3076 15.0548 10.3972 16.139 10.3972C17.2231 10.3972 19.5545 10.3109 20.5322 10.696C21.184 10.955 21.6862 11.4564 21.949 12.1105C22.3381 13.09 22.2483 15.4142 22.2483 16.4966C22.2483 17.5791 22.3381 19.9066 21.949 20.8828Z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0">
+                                            <rect width="14.8991" height="17" fill="white"
+                                                transform="translate(8.68555 8)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contacts__socials-link">
+                                <svg class="contacts__icon-pinterest" width="32" height="32" viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.9252 0H0.474609V32H31.9252V0Z" />
+                                    <g clip-path="url(#clip1)">
+                                        <path class="contacts__socials-hover"
+                                            d="M16.7403 8.20312C13.5556 8.20312 10.4082 10.3406 10.4082 13.8C10.4082 16 11.6374 17.25 12.3823 17.25C12.6896 17.25 12.8666 16.3875 12.8666 16.1438C12.8666 15.8531 12.1309 15.2344 12.1309 14.025C12.1309 11.5125 14.0305 9.73125 16.4889 9.73125C18.6027 9.73125 20.1671 10.9406 20.1671 13.1625C20.1671 14.8219 19.506 17.9344 17.3642 17.9344C16.5913 17.9344 15.9302 17.3719 15.9302 16.5656C15.9302 15.3844 16.7496 14.2406 16.7496 13.0219C16.7496 10.9531 13.835 11.3281 13.835 13.8281C13.835 14.3531 13.9002 14.9344 14.133 15.4125C13.7046 17.2688 12.8293 20.0344 12.8293 21.9469C12.8293 22.5375 12.9131 23.1188 12.969 23.7094C13.0745 23.8281 13.0218 23.8156 13.1832 23.7563C14.7476 21.6 14.6917 21.1781 15.3994 18.3562C15.7812 19.0875 16.7683 19.4812 17.5505 19.4812C20.8469 19.4812 22.3275 16.2469 22.3275 13.3313C22.3275 10.2281 19.6643 8.20312 16.7403 8.20312Z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip1">
+                                            <rect width="11.9193" height="16" fill="white"
+                                                transform="translate(10.4082 8)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" class="contacts__socials-link">
+                                <svg class="contacts__icon-twitter" width="32" height="32" viewBox="0 0 32 32"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M31.6635 0H0.212891V32H31.6635V0Z" />
+                                    <g clip-path="url(#clip2)">
+                                        <path class="contacts__socials-hover"
+                                            d="M22.417 12.7405C22.427 12.8826 22.427 13.0248 22.427 13.1669C22.427 17.5019 19.1498 22.4969 13.1599 22.4969C11.3145 22.4969 9.60022 21.9588 8.1582 21.0248C8.4204 21.0552 8.67247 21.0654 8.94475 21.0654C10.4674 21.0654 11.8691 20.5476 12.9884 19.6644C11.5565 19.6339 10.3565 18.6898 9.94305 17.3903C10.1447 17.4207 10.3464 17.441 10.5582 17.441C10.8506 17.441 11.1431 17.4004 11.4153 17.3294C9.92291 17.0248 8.80355 15.705 8.80355 14.1111V14.0705C9.23715 14.3141 9.74139 14.4664 10.2758 14.4867C9.39849 13.8979 8.82373 12.8928 8.82373 11.7557C8.82373 11.1466 8.98504 10.5882 9.26741 10.1009C10.8708 12.0908 13.2809 13.3902 15.9833 13.5324C15.9329 13.2887 15.9027 13.035 15.9027 12.7811C15.9027 10.974 17.3548 9.50195 19.1598 9.50195C20.0976 9.50195 20.9446 9.89789 21.5396 10.5375C22.2757 10.3954 22.9816 10.1212 23.6068 9.74561C23.3648 10.507 22.8505 11.1466 22.1749 11.5527C22.8304 11.4817 23.4657 11.2989 24.0505 11.0451C23.6069 11.6948 23.0522 12.2735 22.417 12.7405Z" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip2">
+                                            <rect width="15.8924" height="16" fill="white"
+                                                transform="translate(8.1582 8)" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="./js/serch.js"></script>
+</body>
+
+</html>

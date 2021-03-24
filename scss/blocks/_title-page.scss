@@ -8,10 +8,13 @@
         text-align: center;
     }
 
-    &__heading {
-        @include font(24px, 29px);        
-        text-transform: uppercase;
-        color: $dark-pink;
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+
+        @include mobile {
+            flex-direction: column;
+        }
     }
 
     &_m-reg {
@@ -31,6 +34,88 @@
 
         @include mobile {
             margin: 0 0 39px;
+        }
+    }
+
+    &_m-catalog {
+        margin: 0 0 51px;
+
+        @include tablet {
+            margin: 0 0 24px;
+        }
+    }
+
+    &__heading {
+        @include font(24px, 29px);        
+        text-transform: uppercase;
+        color: $dark-pink;
+
+        &_catalog {
+            @include mobile {
+                margin: 0 0 32px;
+            }
+        }
+    }
+
+    &__navigation {
+        max-width: 40%;
+        display: flex;
+        align-items: center;
+
+        @include mobile {
+            max-width: 100%;
+            justify-content: center;
+        }
+    }
+
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;  
+    }
+
+    &__item {
+        @include font(14px, 17px, 300);
+        text-transform: uppercase;
+        position: relative;
+        margin: 0 0 0 16px;
+
+        &_m-left-0 {
+            margin-left: 0;
+        }
+
+        &_active {
+            @include font(14px, 17px, 700);
+            color: $dark-pink;
+        }
+    }
+
+    &__item + &__item::before {
+        content: '/';
+        @include font(14px, 17px, 300);
+        // height: 17px;
+        position: absolute;
+        top: 0;
+        left: -11px;
+        color: $gray;
+    }
+
+    &__link {
+        text-decoration: none;
+        color: $gray;
+
+        &:hover {
+            color: $dark-pink;
+        }
+
+        &:focus {
+            color: $dark-pink;
+            text-decoration: underline;
+            outline: none;
+        }
+
+        &:active {
+            text-decoration: underline;
         }
     }
 }
